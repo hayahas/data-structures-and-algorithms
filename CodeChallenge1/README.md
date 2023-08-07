@@ -10,6 +10,8 @@ Loop
 
 
 ## Solution
+
+- [Link to code ](/CodeChallenge1/Main.java)
 ```java 
 
 package CodeChallenge1;
