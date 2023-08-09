@@ -2,14 +2,16 @@
 
 
 
-## Whiteboard Process
-![Alt text](cc1.png)
+### Whiteboard Process
+![Alt text](image.png)
 
-## Approach & Efficiency
+### Approach & Efficiency
 Loop
 
 
-## Solution
+### Solution
+
+- [Link to code ](/CodeChallenge1/Main.java)
 ```java 
 
 package CodeChallenge1;
