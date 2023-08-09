@@ -3,8 +3,7 @@
 
 
 ## Whiteboard Process
-![Alt text](cc1.png)
-
+![Alt text](image.png)
 ## Approach & Efficiency
 Loop
 
