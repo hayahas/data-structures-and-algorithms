@@ -2,10 +2,12 @@
 
 
 
+
 ### Whiteboard Process
 ![Alt text](image.png)
 
 ### Approach & Efficiency
+
 Loop
 
 
