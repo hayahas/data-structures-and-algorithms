@@ -7,11 +7,17 @@ public class App {
 
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
-        list.insert(10);
-        list.insert(15);
-        list.insert(20);
-        list.insert(25);
-        list.insert(30);
+        list.insert(5);
+        list.insert(4);
+        list.insert(3);
+        list.insert(2);
+        list.insert(1);
+        list.insertToTail(6);
+
+        list.insertAfter(3, 0);
+        list.insertBefore(3, 0);
+
+
 
         System.out.println("Linked List " + list.toString());
         System.out.println("Has 15? " + list.includes(15));
