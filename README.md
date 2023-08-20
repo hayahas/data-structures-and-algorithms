@@ -4,3 +4,5 @@
 - [Code Challenge 2](/CodeChallenge2/README.md)
 - [Code Challenge 3](/CodeChallenge3/README.md)
 - [Code Challenge 4 ](/LinkedList/README.md)
+- [Code Challenge 5](/LinkedList/READMEINSERTIONS.md)
+
