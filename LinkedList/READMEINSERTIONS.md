@@ -1,7 +1,9 @@
 # Linked List Insertions
 
 ### Whiteboard Process
-![Alt text](image-1.png)
+![image](https://github.com/hayahas/data-structures-and-algorithms/assets/103423497/a70f774a-c5e8-4863-ae41-000e9eec71a6)
+
+
 
 ### Approach & Efficiency
 
