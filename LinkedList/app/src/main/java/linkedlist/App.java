@@ -22,5 +22,8 @@ public class App {
         System.out.println("Linked List " + list.toString());
         System.out.println("Has 15? " + list.includes(15));
         System.out.println("Has 50? " + list.includes(50));
+       // System.out.println(list.printReverse());
+        System.out.println("k = " + list.kthValue(6));
+
     }
 }

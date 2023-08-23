@@ -82,17 +82,48 @@ public LinkedList(Node head){
         return false;
     }
 
-    @Override
-    public String toString() {
-        String values = "";
-        Node newNode= head;
-        while(newNode != null){
-            values+="{" + newNode.value + "}" + "->";
-            newNode=newNode.next;
+    public void reverse(){
+        Node prev =null;
+        Node curr=head;
+        Node next=null;
+
+        while (curr != null){
+            next=curr.next;
+            curr.next=prev;
+            prev=curr;
+            curr=next;
+
         }
-        values+="Null";
-        return values;
+        head=prev;
+
     }
+    public int kthValue(int x) {
+     reverse();
+
+        Node temp = new Node();
+        temp = head;
+        int valueOfK; //if the value isn't there return exception not 0
+        int counter=0;
+
+        while (counter != x) {
+            temp=temp.next;
+            counter++;
+            }
+        valueOfK= temp.value;
+        return valueOfK;
+        }
+
+        @Override
+        public String toString() {
+            String values = "";
+            Node newNode= head;
+            while(newNode != null){
+                values+="{" + newNode.value + "}" + "->";
+                newNode=newNode.next;
+            }
+            values+="Null";
+            return values;
+        }
 
 
     public void delete(){
