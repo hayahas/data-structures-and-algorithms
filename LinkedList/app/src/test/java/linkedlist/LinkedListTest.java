@@ -111,7 +111,36 @@ public class LinkedListTest {
             Assertions.assertEquals("{1}->{2}->{3}->{4}->{0}->{5}->Null", result);
 
       }
+      @Test void reverseLinkedList(){
+            App sut = new App();
+            LinkedList ll =new LinkedList();
+            ll.insert(5);
+            ll.insert(4);
+            ll.insert(3);
+            ll.insert(2);
+            ll.insert(1);
 
+           ll.reverse();
+            String result = ll.toString();
+            Assertions.assertEquals("{5}->{4}->{3}->{2}->{1}->Null", result);
+
+      }
+
+      @Test void returnsValueOfKthIndex(){
+            App sut = new App();
+            LinkedList ll =new LinkedList();
+            ll.insert(5);
+            ll.insert(4);
+            ll.insert(3);
+            ll.insert(2);
+            ll.insert(1);
+
+            ll.reverse();
+
+            int result = ll.kthValue(3);
+            Assertions.assertEquals(4, result);
+
+      }
 }
 
 
