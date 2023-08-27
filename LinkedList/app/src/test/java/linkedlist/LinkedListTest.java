@@ -140,6 +140,22 @@ public class LinkedListTest {
             int result = ll.kthValue(3);
             Assertions.assertEquals(4, result);
 
+      }@Test void returns2ZippedLinkedlist(){
+            App sut = new App();
+            LinkedList list = new LinkedList();
+            list.insert(2);
+            list.insert(3);
+            list.insert(1);
+
+            LinkedList list2 = new LinkedList();
+            list2.insert(4);
+            list2.insert(9);
+            list2.insert(5);
+
+
+            LinkedList result = list.zipLists(list,list2);
+            Assertions.assertEquals("{1}->{5}->{3}->{9}->{2}->{4}->Null", result.toString());
+
       }
 }
 
