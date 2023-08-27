@@ -127,6 +127,33 @@ public class LinkedList {
         }
     }
 
+public LinkedList zipLists(LinkedList list1,LinkedList list2){
+
+    LinkedList resultList = new LinkedList();
+
+    Node temp1 = list1.head;
+    Node temp2 = list2.head;
+
+    while (temp1 != null && temp2 != null) {
+        resultList.insertToTail(temp1.value);
+        resultList.insertToTail(temp2.value);
+        temp1 = temp1.next;
+        temp2 = temp2.next;
+    }
+
+    while (temp1 != null) {
+        resultList.insertToTail(temp1.value);
+        temp1 = temp1.next;
+    }
+
+    while (temp2 != null) {
+        resultList.insertToTail(temp2.value);
+        temp2 = temp2.next;
+    }
+
+    return resultList;
+}
+
 
 
     @Override
