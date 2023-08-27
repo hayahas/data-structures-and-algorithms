@@ -67,21 +67,32 @@ this.tail=tail;
         head=prev;
 
     }
-    public int kthValue(int x) {
-     reverse();
-
-        Node temp = new Node();
+     public int kthValue(int x) {
+        try {
+            if (x < 0) {
+                throw new IllegalArgumentException("Value must be non-negative");
+            }
+            reverse();
+            Node temp = new Node();
         temp = head;
         int valueOfK; //if the value isn't there return exception not 0
         int counter=0;
-
-        while (counter != x) {
-            temp=temp.next;
-            counter++;
+            while (temp != null && counter != x) {
+                temp = temp.next;
+                counter++;
             }
-        valueOfK= temp.value;
-        return valueOfK;
+
+            if (temp == null) {
+                throw new IndexOutOfBoundsException("Index not found");
+            }
+            valueOfK= temp.value;
+             return valueOfK;
+        } catch (IllegalArgumentException | IndexOutOfBoundsException e) {
+            System.out.println("Exception: " + e.getMessage());
+            return -1;
         }
+    }
+
 
 
     }
