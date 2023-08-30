@@ -3,8 +3,8 @@ import java.lang.IndexOutOfBoundsException;
 
 public class LinkedList {
 
-    public Node head = null;
-    public Node tail = null;
+    public Node head ;
+    public Node tail ;
 
     public LinkedList() {
 
@@ -85,22 +85,33 @@ public class LinkedList {
         return false;
     }
 
-    public void reverse() {
-        Node prev = null;
-        Node curr = head;
-        Node next = null;
+//    public void reverse() {
+//        Node prev = null;
+//        Node curr = head;
+//        Node next = null;
+//
+//        while (curr != null) {
+//            next = curr.next;
+//            curr.next = prev;
+//            prev = curr;
+//            curr = next;
+//
+//        }
+//        head = prev;
+//
+//
+//    }
+public LinkedList reverse() {
+    LinkedList reversedList = new LinkedList();
 
-        while (curr != null) {
-            next = curr.next;
-            curr.next = prev;
-            prev = curr;
-            curr = next;
-
-        }
-        head = prev;
-
+    Node current = head;
+    while (current != null) {
+        reversedList.insert(current.value);
+        current = current.next;
     }
 
+    return reversedList;
+}
     public int kthValue(int x) {
         try {
             if (x < 0) {
@@ -154,6 +165,27 @@ public LinkedList zipLists(LinkedList list1,LinkedList list2){
     return resultList;
 }
 
+
+public boolean isPalindorme(LinkedList list1){
+    if(list1.head == null) {
+        return false;
+    }
+
+    LinkedList list2 = list1.reverse();
+
+    Node temp1 = list1.head;
+    Node temp2 = list2.head;
+
+    while(temp1 != null && temp2 != null && temp1 != temp2){
+        if(temp1.value != temp2.value){
+            return false;
+        }
+        temp1 = temp1.next;
+        temp2 = temp2.next;
+    }
+
+    return true;
+}
 
 
     @Override
