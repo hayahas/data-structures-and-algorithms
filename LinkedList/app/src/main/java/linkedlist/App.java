@@ -23,7 +23,7 @@ public class App {
         System.out.println("Linked List " + list.toString());
         System.out.println("Has 15? " + list.includes(15));
         System.out.println("Has 50? " + list.includes(50));
-        System.out.println("k = " + list.kthValue(6));
+//        System.out.println("k = " + list.kthValue(6));
 
 
         LinkedList list1 = new LinkedList();
@@ -40,6 +40,23 @@ public class App {
 
         LinkedList result = list.zipLists(list1, list2);
         System.out.println("Zipped Linked List " + result.toString());
+        LinkedList list3 = new LinkedList();
+        list3.insert(1);
+        list3.insert(2);
+        list3.insert(3);
+        list3.insert(2);
+        list3.insert(1);
+
+        System.out.println("list3 : " +list3.toString());
+//        System.out.println("list3 //: " +list3.reverse());
+        System.out.println("Is Palindorme : " +list3.isPalindorme(list3));
+        LinkedList list4 = new LinkedList();
+        list4.insert(1);
+        list4.insert(2);
+        list4.insert(3);
+        list4.insert(4);
+        list4.insert(1);
+        System.out.println("Is Palindorme : " +list4.isPalindorme(list4));
     }
 
 }
